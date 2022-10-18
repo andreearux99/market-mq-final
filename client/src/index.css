@@ -271,3 +271,28 @@ svg {
   display: flex;
   gap: 5px;
 }
+
+/* Product Page */
+#product-page {
+  text-align: left;
+  align-items: flex-start;
+  color: #ffffff;
+  margin: 50px 0 0 20px;
+}
+
+#product-page form {
+  max-width: 100% !important;
+  display: block;
+}
+
+#product-page h1 {
+  text-align: left;
+}
+
+#product-page img {
+  margin-left: 0;
+}
+
+#product-page h5 {
+  margin: 30px 0;
+}

@@ -14,6 +14,7 @@ import EditProduct from './pages/EditProduct';
 // import FiltersProperty from './pages/FiltersProperty';
 // import FiltersElectronics from './pages/FiltersElectronics';
 // import EditElectronic from './pages/EditElectronic';
+import ProductPage from './pages/ProductPage';
 
 const App = () => {
   let a = 'auto';
@@ -35,6 +36,9 @@ const App = () => {
             <Nav.Link href="/create/electronic">
               <Button>New Electronic</Button>
             </Nav.Link>
+            <Nav.Link href="/productPage">
+              <Button>Product Page</Button>
+            </Nav.Link>
           </div>
         </header>
 
@@ -43,6 +47,7 @@ const App = () => {
             <Route path="/create/auto" element={<CreateAuto />} />
             {/* <Route path="/create/electronic" element={<CreateElectronic />} />
             <Route path="/create/property" element={<CreateProperty />} /> */}
+            <Route path="/productPage" element={<ProductPage />} />
 
             <Route path="/:id/editProduct" element={<EditProduct />} />
             <Route path="/filters/auto" exact element={<Filters />} />
