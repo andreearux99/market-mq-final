@@ -51,6 +51,7 @@ const App = () => {
 
             <Route path="/:id/editProduct" element={<EditProduct />} />
             <Route path="/filters/auto" exact element={<Filters />} />
+            <Route path="/:id/productPage" element={<ProductPage />} />
             <Route
               path="/filters/name/:name/mainCategory/:mainCategory"
               exact

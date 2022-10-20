@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { deleteProduct } from '../actions/productAction';
 import toast from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 const deleteToast = () => toast.success('Successfully deleted!');
 
@@ -38,7 +39,7 @@ const Auto = (props) => {
 
   return (
     <div className="product">
-      <strong>Name:</strong> {product.name}
+      <strong>Name:</strong> <Link to={`/${product._id}/productPage`}>{product.name}</Link>
       <br></br>
       <strong>Category:</strong> {product.category}
       <br></br>
