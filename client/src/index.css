@@ -373,3 +373,69 @@ button {
 button:hover {
   background-color: #110928;
 }
+
+
+/* React Responsive Carousel displays in Product Page */
+.carousel-root {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.carousel .thumb, .carousel .thumb img {
+  max-width: 70px;
+  max-height: 70px;
+  margin: 0;
+  padding: 0;
+}
+
+.slider-wrapper .slide div img {
+  margin:0;
+  padding: 0;
+}
+
+.carousel {
+  text-align: center;
+}
+
+.carousel .control-dots {
+  display: none;
+}
+
+.control-arrow {
+  height: 40px;
+  width: 40px;
+  font-size: 21px !important;
+  padding: 0 -5px !important;
+  margin-top: 15% !important;
+}
+
+.carousel .thumbs {
+  padding: 0;
+}
+
+.control-disabled {
+  display: block !important;
+  visibility: visible !important;
+}
+
+.carousel .slider-wrapper {
+  overflow: hidden;
+  margin: auto;
+  width: 50% !important;
+  transition: height .15s ease-in;
+}
+
+.carousel .thumb.selected, .carousel .thumb:hover {
+  border: 2px solid #333 !important;
+  padding: 4px !important;
+}
+
+.carousel .thumb {
+  transition: border .15s ease-in;
+  display: inline-block;
+  margin: 0 4px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  border: none !important;
+  padding: 2px !important;
+}

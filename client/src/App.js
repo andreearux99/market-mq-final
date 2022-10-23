@@ -36,9 +36,6 @@ const App = () => {
             <Nav.Link href="/create/electronic">
               <Button>New Electronic</Button>
             </Nav.Link>
-            <Nav.Link href="/productPage">
-              <Button>Product Page</Button>
-            </Nav.Link>
           </div>
         </header>
 

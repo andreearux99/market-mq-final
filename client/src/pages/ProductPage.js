@@ -5,9 +5,17 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { detailsProduct, updateProduct } from '../actions/productAction';
 import toast from 'react-hot-toast';
 
-import magnetofon from '../data/magnetofon.jpg';
-import cablu_hdmi from '../data/cablu_hdmi.jpg';
+
+// Carousel imports
+import { Component } from 'react';
+import ReactDOM from 'react-dom';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+
+// Seller & product images
 import seller from '../data/seller.jpg';
+import productImg from '../data/product.jpg';
+import mainImage from '../data/asdfasdf.jpg';
 
 
 const editToastFail = () =>
@@ -79,7 +87,8 @@ const ProductPage = () => {
       setEngine(product.engine);
       setHorsePower(product.horsePower);
       setSteeringWheel(product.steeringWheel);
-      setImage(require('../data/'+product.image));
+      var productImg = product.image.indexOf(".") == -1 ? product.image+ '.jpg' : product.image;
+      setImage(require('../data/'+productImg));
       setDescription(product.description);
       setColour(product.colour);
       setCondition(product.condition);
@@ -122,16 +131,31 @@ const ProductPage = () => {
   };
 
 
-
 return (
-        <div className="product-page">
-          <div className="product-description">
+          <div className="product-page">
+            <div className="product-description">
+              <h1>{name}</h1>
+              <br/>
 
-            <img src={image} alt={image} />
-            <h1>{name}</h1>
-            <h3>{price} RON</h3>
-            <h5>Description</h5>
-            <p>{description}</p>
+              <Carousel>
+                  <div>
+                      <img src={image} />
+                  </div>
+                  <div>
+                      <img src={productImg} />
+                  </div>
+                  <div>
+                      <img src={productImg} />
+                  </div>
+                  <div>
+                      <img src={productImg} />
+                  </div>
+              </Carousel>
+
+
+              <h3>{price} RON</h3>
+              <h5>Description</h5>
+              <p>{description}</p>
           </div>
 
           <div className="seller-details">
@@ -159,8 +183,7 @@ return (
 
           </div>
 
-        </div>
-
+      </div>
   );
 };
 
